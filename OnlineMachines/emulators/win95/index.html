@@ -8,6 +8,10 @@
         <script>
             Dos(document.getElementById("dos"), {
                 url: "/OnlineMachines/emulators/win95/win95.jsdos",
+                sockdriveBackend: {
+                    name: "custom",
+                    host: "sockdrive.js-dos.com:8001",
+                },
             });
         </script>
     </body>
