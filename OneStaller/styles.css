@@ -34,14 +34,62 @@ nav a {
    border-radius: 4px 0 0 4px;
    font-size: 1rem; 
 }
-        .search-bar button { padding: 0.75rem 1.5rem; border: none; background: #0078d7; color: #fff; border-radius: 0 4px 4px 0; cursor: pointer; }
-        .app-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; padding: 2rem; }
-        .app-card { background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 1.5rem; display: flex; flex-direction: column; align-items: center; }
-        .app-card img { width: 64px; height: 64px; border-radius: 12px; margin-bottom: 1rem; }
-        .app-card h2 { font-size: 1.1rem; margin: 0.5rem 0; }
-        .app-card p { color: #555; font-size: 0.95rem; margin: 0.5rem 0 1rem 0; text-align: center; }
-        .app-card button { background: #0078d7; color: #fff; border: none; padding: 0.5rem 1.2rem; border-radius: 4px; cursor: pointer; font-weight: 500; }
-        @media (max-width: 600px) {
-            .app-grid { padding: 1rem; gap: 1rem; }
-            .search-bar { margin: 1rem; }
-        }
+.search-bar button {
+   padding: 0.75rem 1.5rem;
+   border: none; 
+   background: #0078d7; 
+   color: #fff;
+   border-radius: 0 4px 4px 0;
+   cursor: pointer; 
+}
+.app-grid {
+   display: grid;
+   grid-template-columns: repeat(
+      auto-fit,
+      minmax(220px, 1fr)
+   );
+   gap: 2rem; 
+   padding: 2rem; 
+}
+.app-card { 
+   background: #fff;
+   border-radius: 8px; 
+   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+   padding: 1.5rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center; 
+}
+.app-card img { 
+   width: 64px;
+   height: 64px;
+   border-radius: 12px;
+   margin-bottom: 1rem; 
+}
+.app-card h2 { 
+   font-size: 1.1rem;
+   margin: 0.5rem 0; 
+}
+.app-card p {
+   color: #555;
+   font-size: 0.95rem;
+   margin: 0.5rem 0 1rem 0;
+   text-align: center; 
+}
+.app-card button {
+   background: #0078d7;
+   color: #fff;
+   border: none;
+   padding: 0.5rem 1.2rem;
+   border-radius: 4px;
+   cursor: pointer;
+   font-weight: 500; 
+}
+@media (max-width: 600px) {
+   .app-grid {
+      padding: 1rem; gap: 1rem; 
+   }
+   .search-bar {
+      margin: 1rem;
+   }
+}
