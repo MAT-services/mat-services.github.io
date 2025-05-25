@@ -4,7 +4,7 @@ body {
    background: #f3f3f3; 
 }
 header { 
-   background: #0078d7;
+   background: linear-gradient(90deg, #0000ff,#00bfff,#00e6ff);
    color: #fff;
    padding: 1rem 2rem;
    display: flex;
