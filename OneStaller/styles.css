@@ -11,7 +11,7 @@ body {
 header { 
    background: linear-gradient(90deg, #0000ff,#00bbff,#00ffff);
    color: #fff;
-   padding: 1rem 2rem;
+   /*padding: 1rem 2rem;*/
    display: flex;
    align-items: center;
    justify-content: space-between; 
@@ -28,7 +28,7 @@ header h1 {
 }
 nav a { 
    color: #fff; 
-   /*margin-left: 2rem;*/
+   margin-left: 2rem;
    text-decoration: none;
    font-weight: 500; 
 }
