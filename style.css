@@ -1,0 +1,118 @@
+marquee{
+      font-size: 30px;
+      font-weight: 800;
+      color: #f10000;
+      font-family: sans-serif;
+      }
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("M.png") no-repeat center center fixed;
+  background-size: cover;
+  image-rendering: pixelated;
+  opacity: 0.6;
+  z-index: -1; /* envoie l'image derrière le contenu */
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+
+}
+#blink {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff0000;
+    transition: 0.5s;
+        }
+
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 2.5%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #0489aa;
+  color: white;
+  font-size: 19px;
+  padding: 16px 32px;
+}
+
+#rectangle {
+  border-radius: 25px;
+  background: #2181ad;
+  padding: 20px; 
+  width: 70px;
+  height: 10px;  
+}
