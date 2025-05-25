@@ -16,7 +16,7 @@ header {
    position: fixed;
    top: 0;
    width: 100%;
-   height: --header-height;
+   height: var(--header-height);
    z-index: 1000;  
    opacity: 0.65;
 }
@@ -31,7 +31,7 @@ nav a {
    font-weight: 500; 
 }
 end_header {
-   height --header-height;
+   height: var(--header-height);
 }
 .search-bar { 
    margin: 2rem auto;
