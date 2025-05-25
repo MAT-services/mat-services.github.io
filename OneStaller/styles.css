@@ -31,7 +31,7 @@ nav a {
    font-weight: 500; 
 }
 end_header {
-   height: var(--header-height);
+   padding-top: var(--header-height);
 }
 .search-bar { 
    margin: 2rem auto;
