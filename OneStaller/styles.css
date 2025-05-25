@@ -30,7 +30,7 @@ nav a {
    text-decoration: none;
    font-weight: 500; 
 }
-end_header {
+.end_header {
    padding-top: var(--header-height);
 }
 .search-bar { 
