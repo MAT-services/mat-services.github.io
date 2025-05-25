@@ -1,3 +1,6 @@
+:root {
+  --header-height: 60px;
+}
 body { 
    font-family: 'Segoe UI', Arial, sans-serif; 
    margin: 0; 
@@ -13,6 +16,7 @@ header {
    position: fixed;
    top: 0;
    width: 100%;
+   height: --header-height;
    z-index: 1000;  
    opacity: 0.65;
 }
@@ -27,7 +31,7 @@ nav a {
    font-weight: 500; 
 }
 end_header {
-   top: 2rem;
+   height --header-height;
 }
 .search-bar { 
    margin: 2rem auto;
