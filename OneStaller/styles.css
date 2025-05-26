@@ -2,7 +2,9 @@
   --header-height: 60px;
 }
 
-
+/* {
+  box-sizing: border-box;
+}*/
 
 body { 
    padding-top: var(--header-height);
