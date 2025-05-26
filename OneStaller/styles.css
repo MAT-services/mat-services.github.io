@@ -59,6 +59,10 @@ nav a {
    border-radius: 0 4px 4px 0;
    cursor: pointer; 
 }
+.container {
+   height: calc(100vh - 60px);
+   border-spacing: 10px;
+}
 .app-grid {
    display: grid;
    grid-template-columns: repeat(
