@@ -28,9 +28,10 @@ header h1 {
 header nav {
    flex-shrink: 0;
    /* Optionnel : largeur max si besoin */
-   max-width: 60%; 
+   /* max-width: 60%; */
    overflow-x: auto;
    white-space: nowrap;
+   left: 10px
 }
 nav a { 
    color: #fff; 
