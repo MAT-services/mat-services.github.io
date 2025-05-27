@@ -66,25 +66,3 @@ button.next {
     </div>
   </main>
 </center>
-<script>
-const prevButton = document.querySelector(".prev");
-const nextButton = document.querySelector(".next");
-const carouselInner = document.querySelector(".carousel-inner");
-const items = document.querySelectorAll(".carousel-item");
-let currentIndex = 0;
-
-nextButton.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % items.length;
-  updateCarousel();
-});
-
-prevButton.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + items.length) % items.length;
-  updateCarousel();
-});
-
-function updateCarousel() {
-  const offset = -currentIndex * 100;
-  carouselInner.style.transform = `translateX(${offset}%)`;
-}
-</script>
