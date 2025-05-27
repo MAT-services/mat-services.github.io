@@ -19,29 +19,6 @@
                 <div  style="height:calc(100vh - 60px - 120px);"><!--class="app-card"-->
                     <marquee>This website is in construction.</marquee>
                     <div id="carousel"></div>
-                    <script>
-                        includeHTML("carousel", "carousel.htm");
-                        const prevButton = document.querySelector(".prev");
-                        const nextButton = document.querySelector(".next");
-                        const carouselInner = document.querySelector(".carousel-inner");
-                        const items = document.querySelectorAll(".carousel-item");
-                        let currentIndex = 0;
-
-                        nextButton.addEventListener("click", () => {
-                        currentIndex = (currentIndex + 1) % items.length;
-                        updateCarousel();
-                        });
-
-                        prevButton.addEventListener("click", () => {
-                        currentIndex = (currentIndex - 1 + items.length) % items.length;
-                        updateCarousel();
-                        });
-
-                        function updateCarousel() {
-                        const offset = -currentIndex * 100;
-                        carouselInner.style.transform = `translateX(${offset}%)`;
-                        }
-                    </script>
                 </div>
             </div><br>
             <section class="app-grid">
@@ -72,4 +49,27 @@
             </section>
         </main>
     </body>
+                        <script>
+                        includeHTML("carousel", "carousel.htm");
+                        const prevButton = document.querySelector(".prev");
+                        const nextButton = document.querySelector(".next");
+                        const carouselInner = document.querySelector(".carousel-inner");
+                        const items = document.querySelectorAll(".carousel-item");
+                        let currentIndex = 0;
+
+                        nextButton.addEventListener("click", () => {
+                        currentIndex = (currentIndex + 1) % items.length;
+                        updateCarousel();
+                        });
+
+                        prevButton.addEventListener("click", () => {
+                        currentIndex = (currentIndex - 1 + items.length) % items.length;
+                        updateCarousel();
+                        });
+
+                        function updateCarousel() {
+                        const offset = -currentIndex * 100;
+                        carouselInner.style.transform = `translateX(${offset}%)`;
+                        }
+                    </script>
 </html>
