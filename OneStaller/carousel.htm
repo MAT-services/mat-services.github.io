@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Déclaration du type de document HTML -->
+        <meta charset="UTF-8">
+        <!-- Déclaration de la compatibilité pour les différents navigateurs -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Déclaration de la largeur de la vue pour les différents dispositifs -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Titre de la page -->
+        <title>Carousel Exemple</title>
+        <!-- Lien vers le fichier CSS pour la mise en forme -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Lien vers le fichier JavaScript pour les fonctionnalités interactives -->
+        <script src="app.js" async></script>
+        <style>
+            Suppression des marges et des bords pour html et body */
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* Définition d'un container pour gérer l'affichage */
+.container {
+    overflow: hidden;
+    /* Cache les éléments qui dépassent du container */
+}
+
+/* Définition du carousel */
+.carousel {
+    position: relative;
+    /* Le carousel est positionné relativement à son parent */
+}
+
+/* Définition de l'élément contenant les diapositives */
+.carousel-inner {
+    display: flex;
+    /* Affiche les éléments en ligne */
+    overflow: hidden;
+    /* Cache les éléments qui dépassent */
+    height: 100vh;
+    /* Hauteur égale à 100% de la hauteur de la vue */
+    flex-wrap: nowrap;
+    /* Empêche les éléments de se placer sur plusieurs lignes */
+}
+
+/* Définition des diapositives */
+.slide {
+    flex: 0 0 100%;
+    /* Largeur de chaque diapositive est de 100% */
+    height: 100%;
+    /* Hauteur de chaque diapositive est de 100% */
+    transition: .5s ease-in-out;
+    /* Ajout d'une animation douce pour la transition entre les diapositives */
+}
+
+/* Définition de l'affichage de l'image de chaque diapositive */
+.slide img {
+    width: 100%;
+    /* Largeur de l'image est de 100% */
+    height: 100%;
+    /* Hauteur de l'image est de 100% */
+    object-fit: cover;
+    /* Couvre tout l'espace disponible */
+}
+
+/* Définition des boutons de contrôle du carousel */
+.carousel-controls {
+    position: absolute;
+    /* Les boutons sont absolument positionnés */
+    z-index: 5;
+    /* Ils sont placés au-dessus des autres éléments */
+    left: 10%;
+    /* La distance à gauche est de 10% */
+    right: 10%;
+    /* La distance à droite est de 10% */
+    top: 50%;
+    /* La distance du haut est de 50% */
+    display: flex;
+    /* Affiche les boutons en ligne */
+    justify-content: space-between;
+    /* Espacement égal entre les boutons */
+}
+
+/* Style des boutons de contrôle */
+.carousel-controls button {
+    padding: 10px;
+    /* Ajout de padding pour un meilleur contrôle */
+    background-color: aquamarine;
+    /* Arrière-plan en aquamarine */
+}
+
+/* Définition des points de contrôle */
+.carousel-dots {
+    position: absolute;
+    /* Les points sont absolument positionnés */
+    z-index: 5;
+    /* Ils sont placés au-dessus des autres éléments */
+    left: 50%;
+    /* La distance à gauche est de 50% */
+    right: 50%;
+    /* La distance à droite est de 50% */
+    bottom: 10%;
+    /*La distance du bas est de 10% */
+    display: flex;
+    /* Affiche les points en ligne */
+    justify-content: center;
+    /* Centrage des points */
+}
+
+/* Style des points de contrôle */
+.carousel-dots .dot {
+    border-radius: 50%;
+    /* Les points sont en forme de cercle */
+    margin: 5px;
+    /* Ajout d'un margin pour un meilleur contrôle */
+    cursor: pointer;
+    /* Curseur en forme de main pour un meilleur contrôle */
+}
+
+/* Styles pour les points de navigation du carrousel */
+.carousel-dots .active {
+    /* Border de 10px pour le point actif */
+    border: 10px solid #761530 !important;
+    /* !important permet de surcharger les autres styles éventuels */
+}
+
+.carousel-dots .inactive {
+    /* Border de 10px pour les points inactifs */
+    border: 10px solid #2596be;
+}
+        </style>
+        <script>
+            // Ceci est une fonction auto - exécutable.Les fonctions auto - exécutables
+// sont des fonctions qui s'exécutent immédiatement après leur déclaration,
+// sans avoir besoin d'être appelées.Les accolades immédiatement après la 
+// déclaration de la fonction et les parenthèses à la fin de la déclaration 
+// définissent la fonction et permettent de l'exécuter immédiatement.
+(function () {
+    // Utilisation de la directive "use strict" pour activer le mode strict en JavaScript
+    // Cela implique une meilleure gestion des erreurs et une syntaxe plus stricte pour le code
+    "use stict"
+
+    // Déclare la constante pour la durée de chaque slide
+    const slideTimeout = 5000;
+
+    // Récupère les boutons de navigation
+    const prev = document.querySelector('#prev');
+    const next = document.querySelector('#next');
+
+    // Récupère tous les éléments de type "slide"
+    const $slides = document.querySelectorAll('.slide');
+
+    // Initialisation de la variable pour les "dots"
+    let $dots;
+
+    // Initialisation de la variable pour l'intervalle d'affichage des slides
+    let intervalId;
+
+    // Initialisation du slide courant à 1
+    let currentSlide = 1;
+
+    // Fonction pour afficher un slide spécifique en utilisant un index
+    function slideTo(index) {
+        // Vérifie si l'index est valide (compris entre 0 et le nombre de slides - 1)
+        currentSlide = index >= $slides.length || index < 1 ? 0 : index;
+
+        // Boucle sur tous les éléments de type "slide" pour les déplacer
+        $slides.forEach($elt => $elt.style.transform = `translateX(-${currentSlide * 100}%)`);
+
+        // Boucle sur tous les "dots" pour mettre à jour la couleur par la classe "active" ou "inactive"
+        $dots.forEach(($elt, key) => $elt.classList = `dot ${key === currentSlide? 'active': 'inactive'}`);
+    }
+
+    // Fonction pour afficher le prochain slide
+    function showSlide() {
+        slideTo(currentSlide);
+        currentSlide++;
+    }
+
+    // Boucle pour créer les "dots" en fonction du nombre de slides
+    for (let i = 1; i <= $slides.length; i++) {
+        let dotClass = i == currentSlide ? 'active' : 'inactive';
+        let $dot = `<span data-slidId="${i}" class="dot ${dotClass}"></span>`;
+        document.querySelector('.carousel-dots').innerHTML += $dot;
+    }
+
+    // Récupère tous les "dots"
+    $dots = document.querySelectorAll('.dot');
+
+    // Boucle pour ajouter des écouteurs d'événement "click" sur chaque "dot"
+    $dots.forEach(($elt, key) => $elt.addEventListener('click', () => slideTo(key)));
+
+    // Ajout d'un écouteur d'événement "click" sur le bouton "prev" pour afficher le slide précédent
+    prev.addEventListener('click', () => slideTo(--currentSlide))
+
+    // Ajout d'un écouteur d'événement "click" sur le bouton "next" pour afficher le slide suivant
+    next.addEventListener('click', () => slideTo(++currentSlide))
+
+    // Initialisation de l'intervalle pour afficher les slides
+    intervalId = setInterval(showSlide, slideTimeout)
+    // Boucle sur tous les éléments de type "slide" pour ajouter des écouteurs d'événement pour les interactions avec la souris et le toucher
+    $slides.forEach($elt => {
+        let startX;
+        let endX;
+        // Efface l'intervalle d'affichage des slides lorsque la souris passe sur un slide
+        $elt.addEventListener('mouseover', () => {
+            clearInterval(intervalId);
+        }, false)
+        // Réinitialise l'intervalle d'affichage des slides lorsque la souris sort d'un slide
+        $elt.addEventListener('mouseout', () => {
+            intervalId = setInterval(showSlide, slideTimeout);
+        }, false);
+        // Enregistre la position initiale du toucher lorsque l'utilisateur touche un slide
+        $elt.addEventListener('touchstart', (event) => {
+            startX = event.touches[0].clientX;
+        });
+        // Enregistre la position finale du toucher lorsque l'utilisateur relâche son doigt
+        $elt.addEventListener('touchend', (event) => {
+            endX = event.changedTouches[0].clientX;
+            // Si la position initiale est plus grande que la position finale, affiche le prochain slide
+            if (startX > endX) {
+                slideTo(currentSlide + 1);
+                // Si la position initiale est plus petite que la position finale, affiche le slide précédent
+            } else if (startX < endX) {
+                slideTo(currentSlide - 1);
+            }
+        });
+    })
+})()
+        </script>
+    </head>
+    <body>
+        <!-- Conteneur principal pour le carrousel -->
+        <div class="container">
+            <!-- Élément carrousel -->
+            <div class="carousel">
+                <!-- Conteneur interne pour les diapositives -->
+                <div class="carousel-inner">
+                    <!-- Première diapositive -->
+                    <div class="slide">
+                        <!-- Image de la première diapositive -->
+                        <img src="https://images.pexels.com/photos/1242764/pexels-photo-1242764.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            alt="Image 1">
+                    </div>
+                    <!-- Deuxième diapositive -->
+                    <div class="slide">
+                        <!-- Image de la deuxième diapositive -->
+                        <img src="https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2p"
+                            alt="Image 2">
+                    </div>
+                    <!-- Troisième diapositive -->
+                    <div class="slide">
+                        <!-- Image de la troisième diapositive -->
+                        <img src="https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            alt="Image 3">
+                    </div>
+                    <!-- Quatrième diapositive -->
+                    <div class="slide">
+                        <!-- Image de la quatrième diapositive -->
+                        <img src="https://images.pexels.com/photos/2739013/pexels-photo-2739013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            alt="Image 4">
+                    </div>
+                    <!-- Cinquième diapositive -->
+                    <div class="slide">
+                        <!-- Image de la cinquième diapositive -->
+                        <img src="https://images.pexels.com/photos/3555161/pexels-photo-3555161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            alt="Image 5">
+                    </div>
+                </div>
+                <!-- Conteneur pour les boutons de navigation -->
+                <div class="carousel-controls">
+                    <!-- Bouton pour passer à la diapositive précédente -->
+                    <button id="prev">Précédent</button>
+                    <!-- Bouton pour passer à la diapositive suivante -->
+                    <button id="next">Suivant</button>
+                </div>
+                <!-- Conteneur pour les points de navigation -->
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+
+    </body>
+</html>
