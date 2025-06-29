@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <title>Accueil mat officiel</title>
+    </head>
+    <body>
+        <marquee> 
+            this website is under construction
+        </marquee> 
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="https://mat-services.github.io/OnlineMachines/emulators/">Online Machines</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+            <span style="position: absolute; top: 40px; left: 1400px; font-size:30px;cursor:pointer" onclick="openNav()">&#9776; multimedia bar</span>
+            <script>
+                function discord() {
+                    open("https://discord.com/invite/EHuuxYbnGU")
+                }
+
+                function youtube() {
+                    open("https://www.youtube.com/@vide_et_o")
+                }
+
+                function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                }
+
+                function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
+            <div class="background"></div>
+            <div style="position: absolute; top: 100px; left: 200px;">
+                 <p>Bienvenu(e)</p>
+                 <p>vous pouvez parcourir notre site gratuit facilement.</p>
+                 <p>Que voulez-vous faire ?</p>
+            </div>
+            <div style="position: absolute; top: 500px; left: 0; width: 100%; text-align: center;">
+                <p id="blink">IL Y A DU NOUVEAU CHEZ MAT SERVICE !</p>
+                <script type="text/javascript">
+                    var blink = document.getElementById('blink');
+                    setInterval(function() {
+                        blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+                    }, 1200);
+                </script>
+            </div>
+            <div style="position: absolute; top: 862px; left: 50%;" id="rectangle"></div>
+            <div class="container">
+                <img class="image" style="position: absolute; top: 869px; left: 51%;" src="discord.png" onclick="discord()">
+            </div>
+        </div>
+        <div class="container">
+            <img class="image" style="position: absolute; top: 868px; left: 54%;" src="youtube.png" onclick="youtube()">
+        </div>
+    </body>
+</html>
+
+
+
+
