@@ -7,6 +7,7 @@ body {
    margin: 0; 
    background: #f3f3f3; 
    background-image: url('assets/M.png');
+   background-position: cover;
 }
 header { 
    background: linear-gradient(0deg,#00bbff, #ffffff);
