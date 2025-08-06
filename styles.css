@@ -65,7 +65,9 @@ button {
    text-decoration: none;
    font-weight: 500; 
   }
-
+  navbutton, .Sidenav {
+   display: none;
+  }
 }
 
 @media (orientation: portrait) {
