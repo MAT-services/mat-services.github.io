@@ -21,8 +21,7 @@ header {
    left: 0;
    width: 100%;
    height: var(--header-height);
-   z-index: 1000;  
-   opacity: 0.65;
+   z-index: 1000; 
    min-width: 0;
 }
 header h1 { 
@@ -52,6 +51,9 @@ button {
    font-weight: 500; 
 }
 @media (orientation: landscape) {
+  header {
+   opacity: 0.65;
+  }
   header nav {
    flex-shrink: 1;
    min-width: 0;
@@ -72,6 +74,7 @@ button {
 @media (orientation: portrait) {
   header nav {
    display: none;
+   opacity: 1;
   }
 
   #Sidenav {
@@ -86,7 +89,7 @@ button {
    overflow-x: hidden; 
    padding-top: 60px; 
    transition: 0.5s; 
-   opacity: 1 !important;
+   opacity: 1;
   }
 
   #sidenav a {
