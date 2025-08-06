@@ -52,7 +52,7 @@ button {
 }
 @media (orientation: landscape) {
   header {
-   opacity: 0.65;
+   opacity: 0.8;
   }
   header nav {
    flex-shrink: 1;
