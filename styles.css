@@ -65,7 +65,7 @@ button {
    text-decoration: none;
    font-weight: 500; 
   }
-  navbutton, .Sidenav {
+  navbutton, #Sidenav {
    display: none;
   }
 }
