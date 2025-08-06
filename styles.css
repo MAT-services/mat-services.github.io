@@ -85,7 +85,7 @@ button {
    overflow-x: hidden; 
    padding-top: 60px; 
    transition: 0.5s; 
-   opacity: 0.65;
+   opacity: 1;
   }
 
   #sidenav a {
