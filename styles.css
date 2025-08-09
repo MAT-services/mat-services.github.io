@@ -50,6 +50,14 @@ button {
    cursor: pointer;
    font-weight: 500; 
 }
+footer {
+  bottom:0;
+  position: absolute; 
+  width: 100%; 
+  text-align: center; 
+  background-color: #f3f3f3; 
+  font-size: 14px;
+}
 @media (orientation: landscape) {
   header {
    opacity: 0.8;
