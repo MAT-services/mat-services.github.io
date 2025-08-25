@@ -2,14 +2,14 @@ body:
 - type: input
   id: UserName
   attributes:
-    label: User Name: 
+    label: "User Name: "
     placeholder: "The name of your user on OneStaller."
   validations:
     required: true
 - type: textarea
   id: improvements
   attributes:
-    label: User Description:
+    label: "User Description:"
     value: |
       1.
       2.
