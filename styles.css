@@ -23,7 +23,6 @@ header {
    height: var(--header-height);
    z-index: 1000; 
    min-width: 0;
-  position: 
 }
 header h1 { 
    margin: 0;
