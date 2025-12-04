@@ -137,8 +137,10 @@ footer {
   }
 }
 
-/*@media (max-height: 100%) {
-  #footer {
-    bottom: 0;
-  }
-}/* Experimental */
+//Experminetal
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
