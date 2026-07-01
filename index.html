@@ -1,55 +1,44 @@
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>MAT Services - Accueil</title>
-        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-        <link rel="stylesheet" href="styles.css" />
-        <script src="HttpReq.js"></script>
-        <meta name="description" content="Welcome to the MAT Services online website! A free service to help people and provide various online tools." />
-        <meta name="keywords" content="MAT Services, online tools, free services, OneStaller, online documentation, help, support" />
-        <meta name="author" content="MAT Services & Co" />
-        <meta name="title" content="MAT Services" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mat-services.github.io" />
-        <meta property="og:title" content="MAT Services" />
-        <meta property="og:description" content="Computing free multi-services." />
-        <meta property="og:image" content="https://mat-services.github.io/assets/banner.jpg" />
-    </head>
-    <body>
-        <header id="Bar"></header>
-        <script>includeHTML("Bar", "bar.htm");</script>
-        <main style="left:10px">
+<html> 
+    <head> 
+        <meta charset="UTF-8"/> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+        <title>MAT Services - Accueil</title>         
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/> 
+        <link rel="stylesheet" href="styles.css"/> 
+        <script src="https://api.mat-services.freeddns.org/all/2.0.js"></script>
+        <meta name="description" content="Welcome to the MAT Services online website! A free service to help people and provide various online tools."/> 
+        <meta name="keywords" content="MAT Services, online tools, free services, OneStaller, online documentation, help, support"/> 
+        <meta name="author" content="MAT Services & Co"/> 
+        <meta name="title" content="MAT Services"/> 
+        <meta property="og:type" content="website"/> 
+        <meta property="og:url" content="https://mat-services.github.io"/> 
+        <meta property="og:title" content="MAT Services"/> 
+        <meta property="og:description" content="Computing free multi-services."/> 
+        <meta property="og:image" content="https://mat-services.github.io/assets/banner.jpg"/> 
+    </head>     
+    <body> 
+        <header id="Bar"></header>         
+        <script>XHTTPReq("Bar", "bar.htm");</script>         
+        <main style="left:10px"> 
             <div style="padding: 10px; padding-top: 0;">
-                <H1>Welcome to the MAT Services online website!</H1>
-                <marquee style="color:red"> This website is in developpement. To see old website, go to <a href="https://old.mat-services.freeddns.org/">https://old.mat-services.freeddns.org/</a>.</marquee>
-                The MAT Services is a free services that created to help people and to enjoy!<BR>
-                Actually, the MAT Services is a website that contains many services like OneStaller, Online documentations and more!<br>
-                    <h2>Who are we?</h2>
-                    <p style="overflow-wrap: break-word;">MAT Services is an independent organization and a community of enthusiasts dedicated to creating various software solutions: websites, utility applications, video games, learning tools, and other software for practical or recreational purposes.
-
-We design services for:<br>
-- users looking for simple and effective tools,<br>
-- developers wishing to improve their productivity,<br>
-- curious game enthusiasts eager to discover original creations,<br>
-- and of anyone in need of assistance, advice or inspiration.<br>
-                        <br>
-We are committed to offering projects primarily open source, developed with passion and in a spirit of collaboration. Some features or projects may also be carried out based on suggestions, depending on our capabilities and the values of our community.<br>
-Our mission: to make digital technology accessible, useful, playful, and above all, built together.</p>
-                    <h2>NextDev</h2>
-                    <p>
-                        - OneStaller [Next gen.] ( + Android Compatibility + Better registering methods )<br>
-                        - OnlineMachines [Next gen.] ( + Adding new pages + Importing WebASM libraries )<br>
-                        - MHTMLDesktop [Next gen.] ( + Adding MAPI + Repairing with archives )<br>
-                    </p>
+                <div style="height: calc(100vh - var(--header-height) - 10px);">
+                    <div id="carrousel"></div>
+                    <script>
+                    Carou("carrousel", "Build")
+                    Carou("carrousel", "BuildDefaults", "all")
+                    Carou("carrousel", "Insert", "test")
+                    Carou("carrousel", "Insert", "test2")
+                    </script>
+                </div>
             </div>
-        </main>
-        <footer id="Footer" style="bottom:0">
+        </main>         
+        <footer id="Footer"> 
+            <!-- style="bottom:0" -->
             <!--<p>© 2025 MAT Services. All rights reserved.</p>
             <p>Contact us at <a href="mailto:mat.concact@gmail.com">mat.concact@gmail.com</a></p>
             Contents created by <a href="https://github.com/MAT-Services-ORG">Mat Services & Co</a>.
-            <br><br>-->
-        </footer>
-        <script>includeHTML("Footer", "footer.htm");</script>
-    </body>
+            <br><br>-->             
+        </footer>         
+        <script>XHTTPReq("Footer", "footer.htm");</script>         
+    </body>     
 </html>
