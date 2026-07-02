@@ -25,20 +25,94 @@
                     <div style="height: 10px;"></div>
                     <div id="carrousel"></div>
                     <script>
-                    Carou("carrousel", "Build")
-                    Carou("carrousel", "BuildDefaults", "all")
-                    Carou("carrousel", "Insert", "test")
-                    Carou("carrousel", "Insert", "test2")
+                        Carou("carrousel", "Build")
+                        Carou("carrousel", "BuildDefaults", "all")
+                        Carou("carrousel", "Insert", `
+                            <h1>Welcome to the MAT Services online website!</h1>
+                            The MAT Services is a free services that created to help people and to enjoy!<br>
+                            Actually, the MAT Services is a website that contains many services like OneStaller, Online documentations and more!
+                            <h2>Who are we?</h2>
+                            <p style="overflow-wrap: break-word;">MAT Services is an independent organization and a community of enthusiasts dedicated to creating various software solutions: websites, utility applications, video games, learning tools, and other software for practical or recreational purposes.
+
+                            We design services for:<br>
+                            - users looking for simple and effective tools,<br>
+                            - developers wishing to improve their productivity,<br>
+                            - curious game enthusiasts eager to discover original creations,<br>
+                            - and of anyone in need of assistance, advice or inspiration.<br>
+                            <br>
+                            We are committed to offering projects primarily open source, developed with passion and in a spirit of collaboration. Some features or projects may also be carried out based on suggestions, depending on our capabilities and the values of our community.<br>
+                            Our mission: to make digital technology accessible, useful, playful, and above all, built together.</p>
+                        `)
+                        Carou("carrousel", "Insert", `
+                            <h1>What are we actually developping ?</h1>
+                            <table style="width:100%">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th>Status</th>
+                                    <th>Features</th>
+                                </tr>
+                                <tr>
+                                    <td>Renovating this website</td>
+                                    <td>Website</td>
+                                    <td>Working...</td>
+                                    <td>Working...</td>
+                                </tr>
+                                <tr>
+                                    <td>OneStaller</td>
+                                    <td>Website</td>
+                                    <td>Working...</td>
+                                    <td>Android Compatibility + Better registering methods</td>
+                                </tr>
+                                <tr>
+                                    <td>Confluence of Creation</td>
+                                    <td>Minecraft Modpack</td>
+                                    <td>Working...</td>
+                                    <td><a href="https://github.com/MAT-services/COCC-Compatibility/blob/main/TODO.MD">TODO.MD</a></td>
+                                </tr>
+                                <tr>
+                                    <td>OnlineMachines</td>
+                                    <td>Website</td>
+                                    <td>Pending.</td>
+                                    <td>Adding new pages + Importing WebASM libraries</td>
+                                </tr>
+                                <tr>
+                                    <td>MHTMLDesktop</td>
+                                    <td>Website</td>
+                                    <td>Potentially cancelled</td>
+                                    <td>Adding new pages + Importing WebASM libraries</td>
+                                </tr>
+                            </table>
+                        `)
+                        Carou("carrousel", "Insert", `
+                            <h1>Wanna join a community ?</h1>
+                            MAT Services host some communities on social medias: <button onclick="window.location.href = '/discord/'">SEE</button>
+                        `)
                     </script>
+                    <style>
+                        .carousel-item {
+                            padding: 10px;
+                            color: #000000;
+                            background-color: #FFF;
+                        }
+                        #carrousel * #carousel-item-1 {
+                            background-image: url('assets/M.png');
+                        }
+                        #carrousel * #carousel-item-2 {
+                            background-image: url('assets/banner.jpg');
+                        }
+                        #carrousel * #carousel-item-3 {
+                            background-image: url('assets/MATCommunities.png');
+                            color: #fff;
+                        }
+                        table, th, td {
+                            border: 1px solid;
+                        }
+                    </style>
                 </div>
             </div>
         </main>         
-        <footer id="Footer"> 
-            <!--<p>© 2025 MAT Services. All rights reserved.</p>
-            <p>Contact us at <a href="mailto:mat.concact@gmail.com">mat.concact@gmail.com</a></p>
-            Contents created by <a href="https://github.com/MAT-Services-ORG">Mat Services & Co</a>.
-            <br><br>-->             
-        </footer>         
+        <footer id="Footer"></footer>         
         <script>XHTTPReq("Footer", "footer.htm");</script>         
     </body>     
 </html>
