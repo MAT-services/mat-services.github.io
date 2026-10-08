@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>js-dos Diablo I</title>
+	<meta charset="UTF-8">
+	<title>js-dos Diablo I</title>
 
-    <style>
-        html, body {
-            height: 100%;
-        }
+	<style>
+		html, body {
+			height: 100%;
+		}
 
-        #dos {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+		#dos {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
 
-    <!-- js-dos style sheet -->
-    <link rel="stylesheet" href="https://v8.js-dos.com/latest/js-dos.css">
+	<!-- js-dos style sheet -->
+	<link rel="stylesheet" href="https://v8.js-dos.com/latest/js-dos.css">
 
-    <!-- js-dos -->
-    <script src="https://v8.js-dos.com/latest/js-dos.js"></script>
+	<!-- js-dos -->
+	<script src="https://v8.js-dos.com/latest/js-dos.js"></script>
 </head>
 <body>
 
-    <div id="dos" style="width: 100%; height: 100%"></div>
+	<div id="dos" style="width: 100%; height: 100%"></div>
 
-    <script>
-        const diabloConf = `
+	<script>
+		const diabloConf = `
 [sdl]
 autolock=false
 mouse_emulation=integration
@@ -75,9 +75,9 @@ imgmount 3 sockdrive wss://sockdrive.js-dos.com:8001 dos.zone diablo_109_d
 boot c:
 `;
 
-        Dos(document.getElementById("dos"), {
-            dosboxConf: diabloConf,
-        });
-    </script>
+		Dos(document.getElementById("dos"), {
+			dosboxConf: diabloConf,
+		});
+	</script>
 </body>
 </html>

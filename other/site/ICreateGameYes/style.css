@@ -1,9 +1,9 @@
 marquee{
-      font-size: 30px;
-      font-weight: 800;
-      color: #f10000;
-      font-family: sans-serif;
-      }
+	  font-size: 30px;
+	  font-weight: 800;
+	  color: #f10000;
+	  font-family: sans-serif;
+	  }
 body, html {
   margin: 0;
   padding: 0;
@@ -67,11 +67,11 @@ body {
 
 }
 #blink {
-    font-size: 20px;
-    font-weight: bold;
-    color: #ff0000;
-    transition: 0.5s;
-        }
+	font-size: 20px;
+	font-weight: bold;
+	color: #ff0000;
+	transition: 0.5s;
+		}
 
 
 .image {
