@@ -53,7 +53,6 @@ footer {
 	/*bottom:0; /*only for short pages.*/
 	position: absolute; 
 	width: 100%; 
-	text-align: center; 
 	background-color: #e0e0e0; 
 	font-size: 14px;
 	color: #000;
@@ -76,6 +75,12 @@ footer {
 	}
 	navbutton, #Sidenav {
 		display: none;
+	}
+	footer * td {
+		min-width: 90px;
+	}
+	footer * .FP {
+		min-width: 350px;
 	}
 }
 
@@ -128,6 +133,10 @@ footer {
 	#main {
 		transition: 0.5s;
 		padding: 20px;
+	}
+
+	.notPortrait {
+		display: none;
 	}
 
 	@media screen and (max-height: 450px) {
