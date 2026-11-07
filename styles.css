@@ -66,6 +66,8 @@ footer {
 		min-width: 0;
 		overflow-x: auto;
 		white-space: nowrap;
+		left: -20px;
+        position: relative;
 	}
 	nav a { 
 		color: #000000; 
