@@ -56,8 +56,17 @@ footer {
 	background-color: #e0e0e0; 
 	font-size: 14px;
 	color: #000;
+	* {
+		img {
+			height: 20px;
+		}
+		td {
+			min-width: unset;
+		}
+	}
 }
 @media (orientation: landscape) {
+	.notLandscape {display: none;}
 	header {
 		opacity: 0.8;
 	}
@@ -78,11 +87,17 @@ footer {
 	navbutton, #Sidenav {
 		display: none;
 	}
-	footer * td {
-		min-width: 90px;
-	}
-	footer * .FP {
-		min-width: 350px;
+	footer * {
+		td {
+			min-width: 90px;
+		}
+		img {
+			height:16px;
+		}
+		.FP {
+			min-width: 350px;
+			font-size:x-large;
+		}
 	}
 }
 
@@ -140,17 +155,8 @@ footer {
 	.notPortrait {
 		display: none;
 	}
-
 	@media screen and (max-height: 450px) {
 		#sidenav {padding-top: 15px;}
 		#sidenav a {font-size: 18px;}
 	}
 }
-
-/*Experminetal
-footer {
-position: fixed;
-left: 0;
-bottom: 0;
-width: 100%;
-}*/
