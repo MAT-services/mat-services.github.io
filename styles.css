@@ -1,3 +1,5 @@
+@import "/footer.css";
+
 :root {
 	--header-height: 60px;
 }
@@ -49,22 +51,6 @@ button {
 	cursor: pointer;
 	font-weight: 500; 
 }
-footer {
-	/*bottom:0; /*only for short pages.*/
-	position: absolute; 
-	width: 100%; 
-	background-color: #e0e0e0; 
-	font-size: 14px;
-	color: #000;
-	* {
-		img {
-			height: 20px;
-		}
-		td {
-			min-width: unset;
-		}
-	}
-}
 @media (orientation: landscape) {
 	.notLandscape {display: none;}
 	header {
@@ -86,18 +72,6 @@ footer {
 	}
 	navbutton, #Sidenav {
 		display: none;
-	}
-	footer * {
-		td {
-			min-width: 90px;
-		}
-		img {
-			height:16px;
-		}
-		.FP {
-			min-width: 350px;
-			font-size:x-large;
-		}
 	}
 }
 

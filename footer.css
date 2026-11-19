@@ -1,0 +1,30 @@
+footer {
+	/*bottom:0; /*only for short pages.*/
+	position: absolute; 
+	width: 100%; 
+	background-color: #e0e0e0; 
+	font-size: 14px;
+	color: #000;
+	* {
+		img {
+			height: 20px;
+		}
+		td {
+			min-width: unset;
+		}
+	}
+}
+@media (orientation: landscape) {
+    footer * {
+		td {
+			min-width: 90px;
+		}
+		img {
+			height:16px;
+		}
+		.FP {
+			min-width: 350px;
+			font-size:x-large;
+		}
+	}
+}
