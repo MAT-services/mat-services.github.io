@@ -1,0 +1,47 @@
+<html> 
+	<head> 
+		<meta charset="UTF-8"/> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+		<title>MAT Services - Organisation & Governance Framework</title>		 
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico"/> 
+		<link rel="stylesheet" href="/styles.css"/> 
+		<script src="https://api.mat-services.freeddns.org/all/2.2.js"></script>
+		<meta name="description" content="Welcome to the MAT Services online website! A free service to help people and provide various online tools."/> 
+		<meta name="keywords" content="MAT Services, online tools, free services, OneStaller, online documentation, help, support"/> 
+		<meta name="author" content="MAT Services & Co"/> 
+		<meta name="title" content="MAT Services"/> 
+		<meta property="og:type" content="website"/> 
+		<meta property="og:url" content="https://mat-services.github.io"/> 
+		<meta property="og:title" content="MAT Services"/> 
+		<meta property="og:description" content="Computing free multi-services."/> 
+		<meta property="og:image" content="https://mat-services.github.io/assets/banner.jpg"/>
+		<script src="https://cdn.jsdelivr.net/npm/marked@18.1.3/lib/marked.umd.js">// TODO: IMPLENT IT TO MAT API! MAT API MD ISN'T UPDATED HERE !</script>
+	</head>	 
+	<body> 
+		<header id="Bar"></header>
+		<script>XHTTPReq("Bar", "/bar.htm");</script>
+		<main style="left:10px"> 
+			<div style="padding: 10px;">
+				<div style="background-color: white; border-radius: 10px; padding: 10px">
+					<div id="markdown">
+# About
+- [Who are we](https://github.com/MAT-services-ORG)
+- [Legal & Licensing](./legal/)
+- [Organisation & Governance Framework](./ogf/) (NOT ADOPTED)
+                    </div>
+					<script>
+						document.getElementById("markdown").innerHTML =
+							marked.parse(document.getElementById("markdown").textContent, {
+								gfm: true,
+								breaks: false
+							});
+					</script>
+					<md>
+					</md>
+				</div>
+			</div>
+		</main>		 
+		<footer id="Footer"></footer>		 
+		<script>XHTTPReq("Footer", "/footer.htm");</script>		 
+	</body>	 
+</html>
